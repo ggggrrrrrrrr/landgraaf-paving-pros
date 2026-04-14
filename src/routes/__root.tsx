@@ -34,6 +34,11 @@ export const Route = createRootRoute({
       { name: "description", content: "Ron Smeijsters Bestratingen: vakkundige bestrating en tuinaanleg in Landgraaf, Limburg." },
       { name: "author", content: "Ron Smeijsters Bestratingen" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Ron Smeijsters Bestratingen — Landgraaf" },
+      { name: "twitter:title", content: "Ron Smeijsters Bestratingen — Landgraaf" },
+      { property: "og:description", content: "Ron Smeijsters Bestratingen: vakkundige bestrating en tuinaanleg in Landgraaf, Limburg." },
+      { name: "twitter:description", content: "Ron Smeijsters Bestratingen: vakkundige bestrating en tuinaanleg in Landgraaf, Limburg." },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
