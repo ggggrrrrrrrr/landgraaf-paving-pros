@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -22,56 +22,72 @@ const contactInfo = [
 
 function ContactPage() {
   return (
-    <div className="pt-20 lg:pt-24">
-      <section className="bg-primary py-20">
+    <div className="pt-14 lg:pt-20">
+      {/* Hero */}
+      <section className="bg-primary py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-2">Neem contact op</p>
-          <h1 className="font-display text-4xl font-bold text-primary-foreground sm:text-5xl">Contact</h1>
-          <p className="mt-4 max-w-2xl text-primary-foreground/70">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground lg:text-5xl">Contact</h1>
+          <p className="mt-3 max-w-2xl text-sm sm:text-base text-primary-foreground/70">
             Wij staan klaar om uw vragen te beantwoorden. Neem vrijblijvend contact op voor advies of een offerte.
           </p>
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Contact content */}
+      <section className="py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            {/* Contact info */}
-            <div>
-              <h2 className="font-display text-2xl font-bold text-foreground">Contactgegevens</h2>
-              <p className="mt-3 text-muted-foreground">
-                Bel of mail ons gerust. Wij reageren doorgaans binnen 24 uur.
-              </p>
-              <div className="mt-8 space-y-6">
+          <div className="grid gap-8 lg:grid-cols-5">
+            {/* Contact info + promises */}
+            <div className="lg:col-span-2 space-y-8">
+              <div>
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Contactgegevens</h2>
+                <p className="mt-2 text-sm text-muted-foreground">Bel of mail ons gerust. Wij reageren doorgaans binnen 24 uur.</p>
+              </div>
+              
+              <div className="space-y-4">
                 {contactInfo.map((c) => {
                   const Wrapper = c.href ? "a" : "div";
                   return (
                     <Wrapper
                       key={c.label}
                       {...(c.href ? { href: c.href, target: c.href.startsWith("http") ? "_blank" : undefined, rel: c.href.startsWith("http") ? "noopener noreferrer" : undefined } : {})}
-                      className="flex items-start gap-4 group"
+                      className="flex items-center gap-3 group rounded-lg border border-border bg-card p-4 transition-all hover:shadow-md hover:border-accent/30"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-accent/10 text-accent shrink-0">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent shrink-0">
                         <c.icon className="h-5 w-5" />
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{c.label}</p>
-                        <p className="mt-0.5 text-foreground font-medium group-hover:text-accent transition-colors">{c.value}</p>
+                        <p className="text-sm text-foreground font-medium group-hover:text-accent transition-colors truncate">{c.value}</p>
                       </div>
                     </Wrapper>
                   );
                 })}
               </div>
+
+              {/* Trust badges */}
+              <div className="rounded-xl bg-secondary p-5 border border-border">
+                <p className="text-sm font-semibold text-foreground mb-3">Wat u kunt verwachten:</p>
+                <div className="space-y-2">
+                  {["Reactie binnen 24 uur", "Gratis adviesgesprek", "Vrijblijvende offerte", "Geen verplichtingen"].map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CheckCircle className="h-3.5 w-3.5 text-accent shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Map */}
-            <div className="rounded-lg overflow-hidden border border-border h-[400px] lg:h-auto">
+            <div className="lg:col-span-3 rounded-xl overflow-hidden border border-border shadow-sm">
               <iframe
                 title="Locatie Ron Smeijsters Bestratingen"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.5!2d5.99!3d50.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmVld2VnIDkxLCBMYW5kZ3JhYWY!5e0!3m2!1snl!2snl!4v1234567890"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: "400px" }}
+                style={{ border: 0, minHeight: "450px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -82,13 +98,13 @@ function ContactPage() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-accent py-16">
+      <section className="bg-accent py-12 sm:py-14">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-display text-2xl font-bold text-accent-foreground sm:text-3xl">Direct bellen?</h2>
-          <p className="mt-2 text-accent-foreground/80">Bel ons voor een snel en persoonlijk adviesgesprek.</p>
+          <p className="mt-2 text-sm text-accent-foreground/80">Bel ons voor een snel en persoonlijk adviesgesprek.</p>
           <a
             href="tel:0655510614"
-            className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg"
           >
             <Phone className="h-4 w-4" />
             06 55510614
