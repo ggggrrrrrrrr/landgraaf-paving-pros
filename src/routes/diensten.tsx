@@ -54,7 +54,7 @@ function DienstenPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-2">Wat wij doen</p>
           <h1 className="font-display text-4xl font-bold text-primary-foreground sm:text-5xl">Onze Diensten</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/70">
-            Van bestrating tot complete tuinaanleg — wij verzorgen elk project met vakmanschap en oog voor detail.
+            Van bestrating tot complete tuinaanleg. wij verzorgen elk project met vakmanschap en oog voor detail.
           </p>
         </div>
       </section>
