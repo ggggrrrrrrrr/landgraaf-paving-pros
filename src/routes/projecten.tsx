@@ -5,6 +5,7 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
+import project6 from "@/assets/project-6.jpg";
 
 export const Route = createFileRoute("/projecten")({
   head: () => ({
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/projecten")({
 });
 
 const projects = [
+  { img: project6, title: "Zwembad terras", desc: "Luxe terras rondom zwembad met grootformaat keramische tegels en kunstgras", cat: "Zwembad" },
   { img: project1, title: "Modern terras", desc: "Keramisch terras met houten wandafwerking", cat: "Terras" },
   { img: project2, title: "Oprit renovatie", desc: "Strakke oprit met grootformaat tegels", cat: "Oprit" },
   { img: project3, title: "Trappen & plateau", desc: "Trap met natuursteen en keerwanden", cat: "Trappen" },
@@ -28,22 +30,22 @@ const projects = [
 
 function ProjectenPage() {
   return (
-    <div className="pt-20 lg:pt-24">
-      <section className="bg-primary py-20">
+    <div className="pt-16 lg:pt-20">
+      <section className="bg-primary py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-2">Portfolio</p>
-          <h1 className="font-display text-4xl font-bold text-primary-foreground sm:text-5xl">Onze Projecten</h1>
-          <p className="mt-4 max-w-2xl text-primary-foreground/70">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground lg:text-5xl">Onze Projecten</h1>
+          <p className="mt-4 max-w-2xl text-sm sm:text-base text-primary-foreground/70">
             Een selectie van recent gerealiseerde projecten in Landgraaf en omstreken.
           </p>
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p, i) => (
-              <div key={i} className="group overflow-hidden rounded-lg border border-border bg-card">
+              <div key={i} className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:shadow-xl hover:-translate-y-1">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={p.img}
@@ -54,10 +56,10 @@ function ProjectenPage() {
                     height={450}
                   />
                 </div>
-                <div className="p-5">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-accent">{p.cat}</span>
-                  <h3 className="mt-1 font-display text-lg font-semibold text-card-foreground">{p.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
+                <div className="p-4 sm:p-5">
+                  <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">{p.cat}</span>
+                  <h3 className="mt-2 font-display text-base sm:text-lg font-semibold text-card-foreground">{p.title}</h3>
+                  <p className="mt-1 text-xs sm:text-sm text-muted-foreground">{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -65,11 +67,11 @@ function ProjectenPage() {
         </div>
       </section>
 
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-3xl font-bold text-foreground">Uw project hier?</h2>
-          <p className="mt-3 text-muted-foreground">Neem contact op en bespreek de mogelijkheden voor uw tuin of oprit.</p>
-          <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:bg-accent/90 transition-colors">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">Uw project hier?</h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground">Neem contact op en bespreek de mogelijkheden voor uw tuin of oprit.</p>
+          <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground hover:bg-accent/90 transition-colors shadow-lg shadow-accent/25">
             Offerte aanvragen <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
