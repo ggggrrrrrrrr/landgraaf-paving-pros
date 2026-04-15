@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, MessageCircle } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -14,7 +14,8 @@ export const Route = createFileRoute("/contact")({
 });
 
 const contactInfo = [
-  { icon: Phone, label: "Telefoon", value: "06 55510614", href: "tel:0655510614" },
+  { icon: Phone, label: "Telefoon", value: "06 17432464", href: "tel:0617432464" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Stuur een bericht via WhatsApp", href: "https://wa.me/31617432464?text=Hallo%2C%20ik%20heb%20interesse%20in%20uw%20diensten.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F" },
   { icon: Mail, label: "E-mail", value: "ronbestratingen@hotmail.com", href: "mailto:ronbestratingen@hotmail.com" },
   { icon: MapPin, label: "Adres", value: "Veeweg 91, 6374 AN Landgraaf", href: "https://maps.google.com/?q=Veeweg+91+Landgraaf" },
   { icon: Clock, label: "Bereikbaar", value: "Ma t/m Za: 07:00 – 18:00", href: undefined },
@@ -100,15 +101,26 @@ function ContactPage() {
       {/* CTA band */}
       <section className="bg-accent py-12 sm:py-14">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-2xl font-bold text-accent-foreground sm:text-3xl">Direct bellen?</h2>
-          <p className="mt-2 text-sm text-accent-foreground/80">Bel ons voor een snel en persoonlijk adviesgesprek.</p>
-          <a
-            href="tel:0655510614"
-            className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg"
-          >
-            <Phone className="h-4 w-4" />
-            06 55510614
-          </a>
+          <h2 className="font-display text-2xl font-bold text-accent-foreground sm:text-3xl">Direct contact?</h2>
+          <p className="mt-2 text-sm text-accent-foreground/80">Bel ons of stuur een WhatsApp bericht voor snel advies.</p>
+          <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="tel:0617432464"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg"
+            >
+              <Phone className="h-4 w-4" />
+              06 17432464
+            </a>
+            <a
+              href="https://wa.me/31617432464?text=Hallo%2C%20ik%20heb%20interesse%20in%20uw%20diensten.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white hover:bg-[#20bd5a] transition-colors shadow-lg"
+            >
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp
+            </a>
+          </div>
         </div>
       </section>
     </div>
