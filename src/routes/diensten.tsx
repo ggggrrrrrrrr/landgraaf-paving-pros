@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Hammer, Car, TreePine, Layers, Fence, Droplets } from "lucide-react";
+import { ArrowRight, Hammer, Car, TreePine, Layers } from "lucide-react";
 
 export const Route = createFileRoute("/diensten")({
   head: () => ({
     meta: [
       { title: "Diensten — Ron Smeijsters Bestratingen" },
-      { name: "description", content: "Ontdek onze diensten: bestrating, opritten, terrassen, tuinaanleg en meer in Landgraaf." },
+      { name: "description", content: "Ontdek onze diensten: bestrating, opritten, terrassen en tuinaanleg in Landgraaf." },
       { property: "og:title", content: "Diensten — Ron Smeijsters Bestratingen" },
       { property: "og:description", content: "Bestrating, opritten, terrassen en tuinaanleg in Landgraaf en omstreken." },
     ],
@@ -22,7 +22,7 @@ const diensten = [
   },
   {
     title: "Opritten & Parkeerplaatsen",
-    desc: "Een oprit die de uitstraling van uw woning versterkt. Van klassieke klinkerbestrating tot moderne grootformaat tegels — duurzaam en onderhoudsarm.",
+    desc: "Een oprit die de uitstraling van uw woning versterkt. Van klassieke klinkerbestrating tot moderne grootformaat tegels, duurzaam en onderhoudsarm.",
     features: ["Klinkerbestrating", "Grootformaat tegels", "Waterdoorlatend", "Duurzaam"],
     Icon: Car,
   },
@@ -38,18 +38,6 @@ const diensten = [
     features: ["Betontrappen", "Natuursteen", "Keerwanden", "Plateaus"],
     Icon: Layers,
   },
-  {
-    title: "Schuttingen & Afrastering",
-    desc: "Plaatsing van houten schuttingen, betonpalen en -platen voor een nette afscheiding van uw tuin. Duurzaam en op maat gemaakt.",
-    features: ["Houten schuttingen", "Betonpalen", "Betonplaten", "Op maat"],
-    Icon: Fence,
-  },
-  {
-    title: "Drainage & Afwatering",
-    desc: "Professionele drainage en afwatering om wateroverlast te voorkomen. Inclusief goten, putten en correcte afschot van bestrating.",
-    features: ["Lijnafwatering", "Drainage", "Afschot", "Putten"],
-    Icon: Droplets,
-  },
 ];
 
 function DienstenPage() {
@@ -61,7 +49,7 @@ function DienstenPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-2">Wat wij doen</p>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground lg:text-5xl">Onze Diensten</h1>
           <p className="mt-3 max-w-2xl text-sm sm:text-base text-primary-foreground/70">
-            Van bestrating tot complete tuinaanleg — wij verzorgen elk project met vakmanschap en oog voor detail.
+            Van bestrating tot complete tuinaanleg. Wij verzorgen elk project met vakmanschap en oog voor detail.
           </p>
         </div>
       </section>
@@ -69,7 +57,7 @@ function DienstenPage() {
       {/* Services grid */}
       <section className="py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
             {diensten.map((d) => (
               <div key={d.title} className="group rounded-xl border border-border bg-card p-6 sm:p-7 transition-all hover:shadow-lg hover:border-accent/30 hover:-translate-y-0.5">
                 <div className="h-11 w-11 rounded-lg bg-accent/10 flex items-center justify-center mb-4">

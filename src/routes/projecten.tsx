@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import project6 from "@/assets/project-6.jpg";
+import projectNew1 from "@/assets/project-new-1.jpg";
+import projectNew2 from "@/assets/project-new-2.jpg";
+import projectNew3 from "@/assets/project-new-3.jpg";
+import projectNew4 from "@/assets/project-new-4.jpg";
+import projectNew5 from "@/assets/project-new-5.jpg";
+import projectNew6 from "@/assets/project-new-6.jpg";
+import projectNew7 from "@/assets/project-new-7.jpg";
+import projectNew8 from "@/assets/project-new-8.jpg";
 
 export const Route = createFileRoute("/projecten")({
   head: () => ({
@@ -20,12 +22,14 @@ export const Route = createFileRoute("/projecten")({
 });
 
 const projects = [
-  { img: project6, title: "Zwembad terras", desc: "Luxe terras rondom zwembad met grootformaat keramische tegels en kunstgras", cat: "Zwembad" },
-  { img: project1, title: "Modern terras", desc: "Keramisch terras met houten wandafwerking", cat: "Terras" },
-  { img: project2, title: "Oprit renovatie", desc: "Strakke oprit met grootformaat tegels", cat: "Oprit" },
-  { img: project3, title: "Trappen & plateau", desc: "Trap met natuursteen en keerwanden", cat: "Trappen" },
-  { img: project4, title: "Voortuin design", desc: "Moderne voortuin met split en kunstgras", cat: "Tuinaanleg" },
-  { img: project5, title: "Achtertuin aanleg", desc: "Complete achtertuin met gazon en bestrating", cat: "Tuinaanleg" },
+  { img: projectNew1, title: "Terras met overkapping", desc: "Keramisch terras met kunstgras en grindpad", cat: "Terras" },
+  { img: projectNew2, title: "Zwembad terras", desc: "Luxe terras rondom zwembad met grootformaat tegels", cat: "Zwembad" },
+  { img: projectNew3, title: "Achtertuin met pergola", desc: "Complete achtertuin met bestrating en plantenbakken", cat: "Tuinaanleg" },
+  { img: projectNew4, title: "Terras met lamellen dak", desc: "Modern terras met lamellendak en gazon", cat: "Terras" },
+  { img: projectNew5, title: "Trappen & keerwanden", desc: "Trap met natuursteen keerwanden en plateau", cat: "Trappen" },
+  { img: projectNew6, title: "Terras met houtafwerking", desc: "Keramisch terras met houten wandbekleding", cat: "Terras" },
+  { img: projectNew7, title: "Voortuin design", desc: "Moderne voortuin met klinkers en siergrassen", cat: "Oprit" },
+  { img: projectNew8, title: "Grindpad met stapstenen", desc: "Japans geïnspireerd pad met split en stapstenen", cat: "Tuinaanleg" },
 ];
 
 function ProjectenPage() {
@@ -42,40 +46,18 @@ function ProjectenPage() {
         </div>
       </section>
 
-      {/* Featured project */}
-      <section className="py-10 sm:py-14">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="group overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-xl">
-            <div className="grid lg:grid-cols-2">
-              <div className="aspect-[16/10] lg:aspect-auto overflow-hidden">
-                <img src={project6} alt="Zwembad terras" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width={800} height={500} />
-              </div>
-              <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
-                <span className="inline-block w-fit rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">Uitgelicht project</span>
-                <h2 className="mt-3 font-display text-xl sm:text-2xl font-bold text-card-foreground">Zwembad terras</h2>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">Luxe terras rondom zwembad met grootformaat keramische tegels en kunstgras. Een project waar vakmanschap en esthetiek samenkomen.</p>
-                <Link to="/contact" className="mt-5 inline-flex w-fit items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all">
-                  Soortgelijk project bespreken <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Grid */}
-      <section className="pb-14 sm:pb-20">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-6">Meer projecten</h3>
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(1).map((p, i) => (
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {projects.map((p, i) => (
               <div key={i} className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:shadow-lg hover:-translate-y-0.5">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     src={p.img}
                     alt={p.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
+                    loading={i < 4 ? undefined : "lazy"}
                     width={600}
                     height={450}
                   />
