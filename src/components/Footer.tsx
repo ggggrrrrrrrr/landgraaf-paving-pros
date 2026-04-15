@@ -27,9 +27,9 @@ export function Footer() {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
-              <a href="tel:0655510614" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              <a href="tel:0617432464" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 <Phone className="h-4 w-4 text-accent" />
-                06 55510614
+                06 17432464
               </a>
               <a href="mailto:ronbestratingen@hotmail.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 <Mail className="h-4 w-4 text-accent" />
