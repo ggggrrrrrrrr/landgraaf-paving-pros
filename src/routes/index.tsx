@@ -70,11 +70,11 @@ function HomePage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="tel:0655510614"
+                href="tel:0617432464"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 <Phone className="h-4 w-4" />
-                06 55510614
+                06 17432464
               </a>
             </div>
           </div>
@@ -191,11 +191,11 @@ function HomePage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="tel:0655510614"
+              href="tel:0617432464"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3.5 text-sm font-semibold text-foreground hover:bg-secondary transition-colors"
             >
               <Phone className="h-4 w-4" />
-              06 55510614
+              06 17432464
             </a>
           </div>
         </div>

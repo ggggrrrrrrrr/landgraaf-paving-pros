@@ -47,7 +47,7 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="tel:0655510614"
+              href="tel:0617432464"
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 shadow-md shadow-accent/20"
             >
               <Phone className="h-4 w-4" />
@@ -80,11 +80,11 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="tel:0655510614"
+              href="tel:0617432464"
               className="flex items-center gap-2 py-3 px-3 mt-2 rounded-lg bg-accent text-accent-foreground font-semibold"
             >
               <Phone className="h-4 w-4" />
-              06 55510614
+              06 17432464
             </a>
           </div>
         </div>
