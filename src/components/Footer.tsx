@@ -31,9 +31,9 @@ export function Footer() {
                 <Phone className="h-4 w-4 text-accent" />
                 06 17432464
               </a>
-              <a href="mailto:ronbestratingen@hotmail.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              <a href="mailto:ron.bestratingen@hotmail.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 <Mail className="h-4 w-4 text-accent" />
-                ronbestratingen@hotmail.com
+                ron.bestratingen@hotmail.com
               </a>
               <div className="flex items-start gap-3 text-sm text-primary-foreground/70">
                 <MapPin className="h-4 w-4 text-accent mt-0.5" />

@@ -91,10 +91,10 @@ function DienstenPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { number: "15+", label: "Jaar ervaring" },
-                { number: "500+", label: "Projecten afgerond" },
-                { number: "100%", label: "Klanttevredenheid" },
-                { number: "5★", label: "Gemiddelde beoordeling" },
+                { number: "25+", label: "Jaar ervaring" },
+                { number: "50+", label: "Projecten afgerond" },
+                { number: "95%", label: "Klanttevredenheid" },
+                { number: "4.7★", label: "Gemiddelde beoordeling" },
               ].map((stat) => (
                 <div key={stat.label} className="rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 p-5 text-center">
                   <p className="font-display text-2xl sm:text-3xl font-bold text-accent">{stat.number}</p>

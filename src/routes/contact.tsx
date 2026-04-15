@@ -16,7 +16,7 @@ export const Route = createFileRoute("/contact")({
 const contactInfo = [
   { icon: Phone, label: "Telefoon", value: "06 17432464", href: "tel:0617432464" },
   { icon: MessageCircle, label: "WhatsApp", value: "Stuur een bericht via WhatsApp", href: "https://wa.me/31617432464?text=Hallo%2C%20ik%20heb%20interesse%20in%20uw%20diensten.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F" },
-  { icon: Mail, label: "E-mail", value: "ronbestratingen@hotmail.com", href: "mailto:ronbestratingen@hotmail.com" },
+  { icon: Mail, label: "E-mail", value: "ron.bestratingen@hotmail.com", href: "mailto:ron.bestratingen@hotmail.com" },
   { icon: MapPin, label: "Adres", value: "Veeweg 91, 6374 AN Landgraaf", href: "https://maps.google.com/?q=Veeweg+91+Landgraaf" },
   { icon: Clock, label: "Bereikbaar", value: "Ma t/m Za: 07:00 – 18:00", href: undefined },
 ];
