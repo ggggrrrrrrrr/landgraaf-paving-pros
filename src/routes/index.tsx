@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle, Phone, Star, Hammer, Car, TreePine, Layers } from "lucide-react";
-import heroBg from "@/assets/hero-bg-new.png";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project4 from "@/assets/project-4.jpg";
+import heroBg from "@/assets/hero-bg.png";
+import projectNew1 from "@/assets/project-new-1.jpg";
+import projectNew2 from "@/assets/project-new-2.jpg";
+import projectNew3 from "@/assets/project-new-3.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,7 +25,7 @@ const services = [
 ];
 
 const strengths = [
-  "Meer dan 15 jaar ervaring",
+  "Meer dan 25 jaar ervaring",
   "Persoonlijke aanpak",
   "Gratis advies en offerte",
   "Vakkundig en betrouwbaar",
@@ -45,7 +45,7 @@ function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Bestrating voorbeeld" className="h-full w-full object-cover" width={1920} height={1080} />
+          <img src={heroBg} alt="Ron Smeijsters Bestratingen bus" className="h-full w-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/50" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
@@ -129,7 +129,7 @@ function HomePage() {
             <h2 className="font-display text-3xl font-bold text-primary-foreground sm:text-4xl">Recente projecten</h2>
           </div>
           <div className="grid gap-3 grid-cols-1 sm:grid-cols-3">
-            {[project1, project2, project4].map((img, i) => (
+            {[projectNew1, projectNew2, projectNew3].map((img, i) => (
               <div key={i} className="group overflow-hidden rounded-xl aspect-[4/3]">
                 <img
                   src={img}
