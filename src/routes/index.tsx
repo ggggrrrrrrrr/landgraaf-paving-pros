@@ -50,28 +50,28 @@ function HomePage() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 mb-5 border border-white/30">
-              <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-white">Bestrating specialist · Landgraaf</span>
+            <div className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 mb-5 border border-accent/30">
+              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-xs font-semibold uppercase tracking-wider text-accent">Bestrating specialist · Landgraaf</span>
             </div>
-            <h1 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
               Vakmanschap in
-              <span className="block text-white"> elke steen</span>
+              <span className="block text-accent"> elke steen</span>
             </h1>
-            <p className="mt-5 text-base sm:text-lg text-white/90 leading-relaxed max-w-lg">
+            <p className="mt-5 text-base sm:text-lg text-primary-foreground/80 leading-relaxed max-w-lg">
               Van terras tot oprit — wij realiseren uw droomproject met oog voor detail en jarenlange ervaring.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-all hover:bg-white/95 hover:gap-3 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-all hover:bg-accent/90 hover:gap-3 shadow-lg shadow-accent/25"
               >
                 Gratis offerte aanvragen
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
                 href="tel:0617432464"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 <Phone className="h-4 w-4" />
                 06 17432464
@@ -125,8 +125,8 @@ function HomePage() {
       <section className="bg-primary py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70 mb-2">Ons werk</p>
-            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">Recente projecten</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-2">Ons werk</p>
+            <h2 className="font-display text-3xl font-bold text-primary-foreground sm:text-4xl">Recente projecten</h2>
           </div>
           <div className="grid gap-3 grid-cols-1 sm:grid-cols-3">
             {[projectNew1, projectNew2, projectNew3].map((img, i) => (
@@ -143,7 +143,7 @@ function HomePage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to="/projecten" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:gap-3 transition-all">
+            <Link to="/projecten" className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all">
               Bekijk alle projecten <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
