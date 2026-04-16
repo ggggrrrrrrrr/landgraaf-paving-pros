@@ -38,17 +38,17 @@
 :root {
   --radius: 0.5rem;
   --background: oklch(0.98 0.005 250);
-  --foreground: oklch(0.55 0.22 25);
+  --foreground: oklch(0.25 0.01 250);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.55 0.22 25);
+  --card-foreground: oklch(0.25 0.01 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.55 0.22 25);
+  --popover-foreground: oklch(0.25 0.01 250);
   --primary: oklch(0.28 0.01 250);
   --primary-foreground: oklch(0.98 0.005 250);
   --secondary: oklch(0.92 0.005 250);
-  --secondary-foreground: oklch(0.55 0.22 25);
+  --secondary-foreground: oklch(0.25 0.01 250);
   --muted: oklch(0.94 0.005 250);
-  --muted-foreground: oklch(0.55 0.22 25);
+  --muted-foreground: oklch(0.45 0.01 250);
   --accent: oklch(0.58 0.24 25);
   --accent-foreground: oklch(0.98 0.005 250);
   --warm: oklch(0.58 0.24 25);
